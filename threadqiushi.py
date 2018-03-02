@@ -72,6 +72,7 @@ class ThreadParse(threading.Thread):
         # 解析为HTML DOM
         html = etree.HTML(html)
 
+		#设置根节点
         node_list = html.xpath('//div[contains(@id, "qiushi_tag")]')
 
         for node in node_list:
@@ -83,7 +84,7 @@ class ThreadParse(threading.Thread):
             content = node.xpath('.//div[@class="content"]/span')[0].text
             # 取出标签里包含的内容，点赞
             zan = node.xpath('.//i')[0].text
-            # 评论
+            # 评论数量
             comments = node.xpath('.//i')[1].text
 
             items = {
