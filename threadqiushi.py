@@ -72,7 +72,7 @@ class ThreadParse(threading.Thread):
         # 解析为HTML DOM
         html = etree.HTML(html)
 
-		#设置根节点
+		#设置根节点,
         node_list = html.xpath('//div[contains(@id, "qiushi_tag")]')
 
         for node in node_list:
