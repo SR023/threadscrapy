@@ -165,7 +165,7 @@ def main():
     with lock:
         # 关闭文件
         filename.close()
-    print "谢谢使用！"
+    print "Bye" 
 
 if __name__ == "__main__":
     main()
